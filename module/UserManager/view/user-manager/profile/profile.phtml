@@ -1,0 +1,18 @@
+<?php $title='ANAGRAFICA '.$this->paziente->nome.' '.$this->paziente->cognome; ; 
+$this->headTitle($title); ?>
+
+<body style="
+      background: url('<?= $this->basePath(); ?>/img/background/b_<?php echo $this->content;?>.png'); 
+      background-repeat: repeat-x;
+      border-bottom: 8px solid <?php echo $this->color;?>"
+    >
+    <article style="background-color: white;">
+        <div class="row" style="border-bottom: 3px solid <?php echo $this->color ?>; padding: 20px">
+           <?php include('header_profile.phtml'); ?>
+        </div>
+        <div style=" padding: 20px">
+            <?php include('categories.phtml')?>
+            <?php include($this->content.'.phtml'); ?>
+        </div>
+    </article>
+</body>

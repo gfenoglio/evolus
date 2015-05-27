@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <!-- colonna della foto e dei dati base -->
+    <div class="col-md-9">
+        
+        <!-- colonna della foto -->
+        <div class="col-md-2">
+            <img class="immagine-tonda" src="<?= $this->basePath(); ?>/img/img_profile.png" width="120px" height="120px" style="border: 2px solid <?php echo $this->color ?> ;">
+        </div>
+        <!-- colonna dei dati base -->
+        <div class="col-md-10">
+            <h2><?php echo $this->paziente->nome.' '.$this->paziente->cognome; ?></h2>
+            <h4 style="color: grey">CF: <?php echo $this->paziente->codfis ?></h4>
+            <input type="button" value="MODIFICA" class="btn_standard"/>
+        </div>
+    </div>
+
+    <!-- colonna dei bottoncini e privacy -->
+    <div class="col-md-3" style="text-align: right">
+        <!-- bottoncini -->
+        <br>
+        <div class="row" style="padding-right: 20px">
+            <a href="#">
+                <img src="<?= $this->basePath(); ?>/img/icone72dpi/icone72dpi-37.png" />
+            </a>
+            <a href="#">
+                <img src="<?= $this->basePath(); ?>/img/icone72dpi/icone72dpi-38.png" />
+            </a>
+            <a href="#">
+                <img src="<?= $this->basePath(); ?>/img/icone72dpi/icone72dpi-39.png" />
+            </a>
+            <a href="#">
+                <img src="<?= $this->basePath(); ?>/img/icone72dpi/icone72dpi-40.png" />
+            </a>
+            <a href="#">
+                <img src="<?= $this->basePath(); ?>/img/icone72dpi/icone72dpi-41.png" />
+            </a>
+            <a href="#">
+                <img src="<?= $this->basePath(); ?>/img/icone72dpi/icone72dpi-42.png" />
+            </a>
+       
+            <br/>
+            <h5><a href="#" class="no-link">Privacy</a></h5>
+        </div>
+    </div>
+    
+    </body>
+</html>

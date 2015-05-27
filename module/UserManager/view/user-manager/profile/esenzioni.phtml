@@ -1,0 +1,31 @@
+<?php $title='Esenzioni'; ; 
+$this->headTitle($title); ?>
+<section>
+    <div class="section_title" style="color: <?php echo $this->color ?>">
+        <h2>ESENZIONI</h2>
+    </div>
+    <div style="clear: both" class="text-right">
+        <input type="button" class="btn_standard" value="STAMPA TUTTE LE ESENZIONI" style="background-color: <?php echo $this->color; ?>; color: #FFFFFF"/>
+    </div>
+    <div>
+        <table class="table_esenzioni">
+            <tr class="tr_th">
+                <th>Nome</th>
+                <th>Indicazioni</th>
+                <th>Data</th>
+                <th>Stato</th>
+                <th>Azioni</th>
+            </tr>
+            <tr>
+                <td>E05</td>
+                <td>Soggetti con meno di 65 anni</td>
+                <td>30 maggio 2015</td>
+                <td>
+                    <img src="<?= $this->basePath(); ?>/img/icone72dpi/icone72dpi-70.png"/>
+                    Scaduta il 20 febbraio
+                </td>
+                <td><img src='<?= $this->basePath(); ?>/img/icone72dpi/icone72dpi-51.png'</td>
+            </tr>
+        </table>
+    </div>
+</section>

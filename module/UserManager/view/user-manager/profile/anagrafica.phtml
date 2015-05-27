@@ -1,0 +1,51 @@
+<?php $title='Anagrafica'; ; 
+$this->headTitle($title); ?>
+<section>
+    <div class="section_title" style="color: <?php echo $this->color ?>">
+        <h2>ANAGRAFICA</h2>
+    </div>
+    <div class="col-xs-6">
+        <h3 style="color: <?php echo $this->color ?>">
+            DATI
+        </h3>
+        <b>Nome: </b><?php echo ucfirst(strtolower($this->paziente->nome)) ?><br/>
+        <b>Cognome: </b><?php echo ucfirst(strtolower($this->paziente->cognome)) ?><br/>
+        <?php $time = strtotime($this->paziente->natoil);
+            $date = date('d-m-Y',$time);
+            $eta = date("Y")-date("Y", $time); ?>
+        <b>Data di nascita: </b><?php echo $date; ?><br/>
+        <b>Età: </b><?php  echo $eta;?><br/>
+        <b>Codice fiscale: </b><?php echo strtoupper($this->paziente->codfis);?><br/>
+        <b>Gruppo sanguigno: </b><?php echo strtoupper($this->paziente->emogruppo) ?><br/>
+        <b>Obbligo occhiali: </b><?php echo ucfirst(strtolower($this->paziente->obbocc)) ?><br/>
+        <b>Altezza: </b><?php echo ucfirst(strtolower($this->paziente->altezza)) ?><br/>
+        <b>Colore occhi: </b><?php echo ucfirst(strtolower($this->paziente->colcapelli)) ?><br/>
+        <b>Colore capelli: </b><?php echo ucfirst(strtolower($this->paziente->colocchi)) ?><br/>
+        <b>Pacemaker: </b><?php echo ucfirst(strtolower($this->paziente->pacemaker)) ?><br/>
+        <b>Diabete: </b><?php echo ucfirst(strtolower($this->paziente->diabete)) ?><br/>
+        <b>Patologie psicologiche: </b><?php echo ucfirst(strtolower($this->paziente->patolpsico)) ?><br/>
+    </div>
+    <div class="col-xs-6">
+        <h3 style="color: <?php echo $this->color ?>">
+            DATI MODIFICABILI
+        </h3>
+        <b>Foto: </b>caricata<br/>
+        <b>Indirizzo residenza: </b>via Roma 5 Torino TO 10045<br/>
+        <b>Indirizzo domicilio: </b>via Roma 5 Torino TO 10045<br/>
+        <b>Telefono casa: </b>123456789<br/>
+        <b>Cellulare: </b>123456789<br/>
+        <b>Nome parente per emergenze: </b>Nome Parente<br/>
+        <b>Telefono parente per emergenze: </b>0111011101<br/>
+        <b>Donatore midollo: </b>No<br/>
+        <b>Donatore Avis: </b>Si<br/>
+        <b>Donatore organi: </b>Si<br/>
+        <b>Tatuaggi: </b>Si<br/>
+        <b>Dove: </b>Spalla destra, gamba sinistra, schiena, polso destro<br/>
+        <b>Piercing: </b>no<br/>
+        <b>Dove: </b><br/>
+    </div>
+
+    <div style="clear: both" class="text-right">
+        <input type="button" class="btn_standard" value="MODIFICA" style="background-color: <?php echo $this->color; ?>; color: #FFFFFF"/>
+    </div>
+</section>

@@ -1,0 +1,77 @@
+<?php $title='Login' ; $this->headTitle($title); ?>
+
+<style>
+    .container {
+        width: 100% !important;
+        padding: 0;
+        margin: 0;
+        border: 0;
+    }
+    
+    .imgcont {
+        /*background-image: url(<?= $this->basePath(); ?>/img/bg/bg-login.png);*/
+        background: -webkit-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
+        background: linear-gradient(to bottom right, #50a3a2 0%, #53e3a6 100%);
+        padding: 30px 0px 60px 0px;
+    }
+    
+    label {
+        width: 100%;
+    }
+    
+    input[type='submit'] {
+        padding: 10px 30px;
+        border-radius: 0;
+        font-weight: bold;
+    }
+    
+</style>
+
+<div class="imgcont">
+    
+    <div class="row" style="text-align:center;">
+        <img src="<?= $this->basePath(); ?>/img/logo_evolus.jpg" width='200px' height='100px'/>
+    </div>
+    <br><br>
+
+<div class="row" style="">
+    <div class="col-md-12">
+    <div class="col-md-4"></div>
+    <div class="col-md-4" >
+
+<?php
+if(! empty($errmsg)) {
+?>
+<div class="alert alert-danger" role="alert">
+    <?php echo $errmsg; ?>
+</div>
+<?php
+}
+?>
+
+<?php
+    $form->setAttribute('action', $this->url('Login', array('action' => 'login')));
+    $form->prepare();
+    echo $this->form()->openTag($form); 
+?>
+
+<div class="form-group">
+    <?php $form->get('pin')->setAttribute('placeholder', 'Utente'); ?>
+    <?php echo $this->formRow($form->get('pin')); ?>
+</div>
+
+<div class="form-group">
+    <?php $form->get('password')->setAttribute('placeholder', 'Password'); ?>
+    <?php echo $this->formRow($form->get('password')); ?>
+</div>
+     <div style="text-align: center">
+<?php
+    echo $this->formSubmit($form->get('submit'));
+    echo $this->form()->closeTag();
+?>
+    </div>
+        </div>   
+    <div class="col-md-4"></div>
+    </div>
+</div>
+</div>

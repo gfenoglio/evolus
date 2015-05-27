@@ -1,0 +1,28 @@
+<?php $title='Esenzioni'; ; 
+$this->headTitle($title); ?>
+<section>
+    <div class="section_title" style="color: <?php echo $this->color ?>">
+        <h2>ESAMI DI LABORATORIO</h2>
+    </div>
+    <div style="clear: both" class="text-right">
+        <input type="button" class="btn_standard" value="STAMPA TUTTI" style="background-color: <?php echo $this->color; ?>; color: #FFFFFF"/>
+    </div>
+    <div>
+        <table class="table_esamiDiLab">
+            <tr class="tr_th">
+                <th>Data</th>
+                <th>Esame</th>
+                <th>Valore</th>
+                <th>Valore normale</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td>4 Dicembre 2014</td>
+                <td>Ferro</td>
+                <td>2</td>
+                <td>(3,5-5,5)mml/I</td>
+                <td><img src='<?= $this->basePath(); ?>/img/icone72dpi/icone72dpi-56.png'/></td>
+            </tr>
+        </table>
+    </div>
+</section>
